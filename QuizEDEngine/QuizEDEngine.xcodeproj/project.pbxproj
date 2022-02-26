@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DFCFB81A27CABB6B00E2C933 /* QuizEDEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCFB81127CABB6B00E2C933 /* QuizEDEngine.framework */; };
+		DFCFB82A27CABD1B00E2C933 /* FlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB82927CABD1B00E2C933 /* FlowTest.swift */; };
+		DFCFB82C27CABE9100E2C933 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCFB82B27CABE9100E2C933 /* Flow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		DFCFB81127CABB6B00E2C933 /* QuizEDEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuizEDEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCFB81927CABB6B00E2C933 /* QuizEDEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizEDEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFCFB82927CABD1B00E2C933 /* FlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTest.swift; sourceTree = "<group>"; };
+		DFCFB82B27CABE9100E2C933 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 		DFCFB81327CABB6B00E2C933 /* QuizEDEngine */ = {
 			isa = PBXGroup;
 			children = (
+				DFCFB82B27CABE9100E2C933 /* Flow.swift */,
 			);
 			path = QuizEDEngine;
 			sourceTree = "<group>";
@@ -72,6 +77,7 @@
 		DFCFB81D27CABB6B00E2C933 /* QuizEDEngineTests */ = {
 			isa = PBXGroup;
 			children = (
+				DFCFB82927CABD1B00E2C933 /* FlowTest.swift */,
 			);
 			path = QuizEDEngineTests;
 			sourceTree = "<group>";
@@ -137,9 +143,11 @@
 				TargetAttributes = {
 					DFCFB81027CABB6B00E2C933 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					DFCFB81827CABB6B00E2C933 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -184,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFCFB82C27CABE9100E2C933 /* Flow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFCFB82A27CABD1B00E2C933 /* FlowTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +339,7 @@
 		DFCFB82427CABB6B00E2C933 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -350,6 +361,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -357,6 +369,7 @@
 		DFCFB82527CABB6B00E2C933 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -385,14 +398,22 @@
 		DFCFB82727CABB6B00E2C933 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8C9UMVY9L4;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CFers.QuizEDEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -400,10 +421,17 @@
 		DFCFB82827CABB6B00E2C933 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8C9UMVY9L4;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CFers.QuizEDEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
